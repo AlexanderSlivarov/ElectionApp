@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectionApp", "ElectionApp\ElectionApp.csproj", "{F3CC58EA-4061-4A47-A486-C250FA3CF12C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{1F982C5A-2A91-482A-A917-E518CECF8CCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{3319E019-1D46-4F66-A5F2-A76C833C8F28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3CC58EA-4061-4A47-A486-C250FA3CF12C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3CC58EA-4061-4A47-A486-C250FA3CF12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3CC58EA-4061-4A47-A486-C250FA3CF12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3CC58EA-4061-4A47-A486-C250FA3CF12C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F982C5A-2A91-482A-A917-E518CECF8CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F982C5A-2A91-482A-A917-E518CECF8CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F982C5A-2A91-482A-A917-E518CECF8CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F982C5A-2A91-482A-A917-E518CECF8CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3319E019-1D46-4F66-A5F2-A76C833C8F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3319E019-1D46-4F66-A5F2-A76C833C8F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3319E019-1D46-4F66-A5F2-A76C833C8F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3319E019-1D46-4F66-A5F2-A76C833C8F28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DE4A3A7-568A-4A04-96E9-81279B2F9197}
+	EndGlobalSection
+EndGlobal
