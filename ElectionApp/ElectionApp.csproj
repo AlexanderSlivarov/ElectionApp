@@ -56,11 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BulletinForm.cs">
+    <Compile Include="BulletinForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BulletinForm.Designer.cs">
-      <DependentUpon>BulletinForm.cs</DependentUpon>
+    <Compile Include="BulletinForm1.Designer.cs">
+      <DependentUpon>BulletinForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BulletinForm2.Designer.cs">
+      <DependentUpon>BulletinForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="WelcomeForm.cs">
@@ -70,8 +76,11 @@
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BulletinForm.resx">
-      <DependentUpon>BulletinForm.cs</DependentUpon>
+    <EmbeddedResource Include="BulletinForm1.resx">
+      <DependentUpon>BulletinForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulletinForm2.resx">
+      <DependentUpon>BulletinForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

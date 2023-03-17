@@ -10,36 +10,42 @@ using System.Windows.Forms;
 
 namespace ElectionApp
 {
-    public partial class BulletinForm : Form
+    public partial class BulletinForm2 : Form
     {
-        CheckBox[] checkBoxes = new CheckBox[13];
+        CheckBox[] checkBoxes = new CheckBox[9];
 
-        string[] names = new string[] {
-            "БСП",
-            "ГЕРБ-СДС",
-            "\"Възраждане\"",
-            "\"Има такъв народ\"",
-            "\"Народна партия Истината и само истината\"",
-            "\"Неутрална България\"",
-            "\"Българско национално обединение\"",
-            "\"Заедно\"",
-            "\"Български национален съюз\"",
-             "НДСВ",
-            "\"КОД\"",
-            "\"Продължаваме промяната - Демократична България\"",
-            "ДПС" };
-        public BulletinForm()
+        string[] names = {
+            "\"Левицата!\"",
+            "\"Български възход\"",
+            "\"МИР\"",
+            "\"Българска социалдемокрация - Евролевица\"",
+            "\"Български съюз за директна демокрация - БСДД\"",
+            "\"Глас Народен\"",
+            "\"Социалистическа партия Български път\"",
+            "\"Вън от ЕС и НАТО\"",
+            "Не подкрепям никого." };
+
+        public BulletinForm2()
         {
             InitializeComponent();
 
             int top = 100;
 
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 9; i++)
             {
                 checkBoxes[i] = new CheckBox();
                 checkBoxes[i].Font = new Font(checkBoxes[i].Font.FontFamily, 15);
                 checkBoxes[i].AutoSize = true;
-                checkBoxes[i].Text = names[i];
+
+                if (i == 8)
+                {
+                    checkBoxes[i].Text = names[i];
+                }
+                else
+                {
+                    checkBoxes[i].Text = $"{i + 1}. {names[i]}";
+                }
+                
                 checkBoxes[i].Left = 10;
                 checkBoxes[i].Top = top;
                 this.Controls.Add(checkBoxes[i]);
@@ -65,7 +71,7 @@ namespace ElectionApp
 
                     int index = i * 3 + j + 101;
                     RadioButton rb = new RadioButton();
-                    rb.Font = new Font(checkBoxes[i].Font.FontFamily, 15);
+                    rb.Font = new Font(rb.Font.FontFamily, 15);
                     rb.AutoSize = true;
                     rb.Text = index.ToString();
                     rb.Name = "radioButton" + index.ToString();
@@ -80,7 +86,7 @@ namespace ElectionApp
             SingleCheck((CheckBox)sender);
         }
         private void SingleCheck(CheckBox checkedBox)
-        {            
+        {
             foreach (CheckBox cb in checkBoxes)
             {
                 if (cb != checkedBox)
@@ -88,6 +94,12 @@ namespace ElectionApp
                     cb.Checked = false;
                 }
             }
+        }
+        private void previousPage_Click(object sender, EventArgs e)
+        {
+            BulletinForm1 bulletinForm1 = new BulletinForm1();
+            bulletinForm1.Show();
+            this.Hide();
         }
     }
 }

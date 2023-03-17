@@ -1,6 +1,6 @@
 ﻿namespace ElectionApp
 {
-    partial class BulletinForm
+    partial class BulletinForm1
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.nextPage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -63,16 +64,28 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Предпочитание (преференция) за кандидат";
             // 
-            // BulletinForm
+            // nextPage
+            // 
+            this.nextPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nextPage.Location = new System.Drawing.Point(409, 596);
+            this.nextPage.Name = "nextPage";
+            this.nextPage.Size = new System.Drawing.Size(166, 42);
+            this.nextPage.TabIndex = 3;
+            this.nextPage.Text = "Следващ";
+            this.nextPage.UseVisualStyleBackColor = true;
+            this.nextPage.Click += new System.EventHandler(this.nextPage_Click);
+            // 
+            // BulletinForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 650);
+            this.Controls.Add(this.nextPage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "BulletinForm";
-            this.Text = "BulletinForm";
+            this.Name = "BulletinForm1";
+            this.Text = "BulletinForm1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,5 +96,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button nextPage;
     }
 }

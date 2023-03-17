@@ -19,8 +19,8 @@ namespace ElectionApp
 
         private void voteButton_Click(object sender, EventArgs e)
         {
-            BulletinForm bulletinForm = new BulletinForm();
-            bulletinForm.Show();
+            BulletinForm1 bulletinForm1 = new BulletinForm1();
+            bulletinForm1.Show();
             this.Hide();
         }
     }
