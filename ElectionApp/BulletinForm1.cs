@@ -95,5 +95,19 @@ namespace ElectionApp
             bulletinForm2.Show();
             this.Hide();
         }
+
+        private void reviewButton_Click(object sender, EventArgs e)
+        {
+            ReviewForm reviewForm = new ReviewForm();
+            reviewForm.Show();
+            this.Hide();
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.Show();
+            this.Hide();
+        }
     }
 }

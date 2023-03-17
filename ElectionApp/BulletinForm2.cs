@@ -43,7 +43,7 @@ namespace ElectionApp
                 }
                 else
                 {
-                    checkBoxes[i].Text = $"{i + 1}. {names[i]}";
+                    checkBoxes[i].Text = $"{i + 14}. {names[i]}";
                 }
                 
                 checkBoxes[i].Left = 10;
@@ -99,6 +99,20 @@ namespace ElectionApp
         {
             BulletinForm1 bulletinForm1 = new BulletinForm1();
             bulletinForm1.Show();
+            this.Hide();
+        }
+
+        private void reviewButton_Click(object sender, EventArgs e)
+        {
+            ReviewForm reviewForm = new ReviewForm();
+            reviewForm.Show();
+            this.Hide();
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.Show();
             this.Hide();
         }
     }

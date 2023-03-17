@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nextPage = new System.Windows.Forms.Button();
+            this.reviewButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // settingsButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(747, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Настройки на екрана";
-            this.button1.UseVisualStyleBackColor = true;
+            this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.settingsButton.Location = new System.Drawing.Point(766, 12);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(206, 38);
+            this.settingsButton.TabIndex = 0;
+            this.settingsButton.Text = "Настройки на екрана";
+            this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // label1
             // 
@@ -58,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(603, 92);
+            this.label2.Location = new System.Drawing.Point(622, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(350, 20);
             this.label2.TabIndex = 2;
@@ -67,7 +69,7 @@
             // nextPage
             // 
             this.nextPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nextPage.Location = new System.Drawing.Point(409, 596);
+            this.nextPage.Location = new System.Drawing.Point(292, 610);
             this.nextPage.Name = "nextPage";
             this.nextPage.Size = new System.Drawing.Size(166, 42);
             this.nextPage.TabIndex = 3;
@@ -75,17 +77,29 @@
             this.nextPage.UseVisualStyleBackColor = true;
             this.nextPage.Click += new System.EventHandler(this.nextPage_Click);
             // 
+            // reviewButton
+            // 
+            this.reviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.reviewButton.Location = new System.Drawing.Point(806, 610);
+            this.reviewButton.Name = "reviewButton";
+            this.reviewButton.Size = new System.Drawing.Size(166, 42);
+            this.reviewButton.TabIndex = 4;
+            this.reviewButton.Text = "Преглед";
+            this.reviewButton.UseVisualStyleBackColor = true;
+            this.reviewButton.Click += new System.EventHandler(this.reviewButton_Click);
+            // 
             // BulletinForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 650);
+            this.ClientSize = new System.Drawing.Size(985, 664);
+            this.Controls.Add(this.reviewButton);
             this.Controls.Add(this.nextPage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.settingsButton);
             this.Name = "BulletinForm1";
-            this.Text = "BulletinForm1";
+            this.Text = "Първа страница";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,9 +107,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button settingsButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button nextPage;
+        private System.Windows.Forms.Button reviewButton;
     }
 }
