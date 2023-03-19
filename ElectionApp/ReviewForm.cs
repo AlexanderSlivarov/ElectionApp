@@ -18,7 +18,7 @@ namespace ElectionApp
 
             Label selectedPartyLabel = new Label();
             selectedPartyLabel.Font = new Font(selectedPartyLabel.Font.FontFamily, 17, FontStyle.Bold);
-            selectedPartyLabel.Text = GlobalVariables.SelectedPartyName;
+            selectedPartyLabel.Text = $"{GlobalVariables.SelectedPartyName} \n {GlobalVariables.PreferenceNumber}";
 
             selectedPartyLabel.AutoSize = false;
             selectedPartyLabel.TextAlign = ContentAlignment.MiddleCenter;

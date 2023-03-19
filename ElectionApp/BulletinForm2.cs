@@ -70,14 +70,16 @@ namespace ElectionApp
                     }
 
                     int index = i * 3 + j + 101;
-                    RadioButton rb = new RadioButton();
-                    rb.Font = new Font(rb.Font.FontFamily, 15);
-                    rb.AutoSize = true;
-                    rb.Text = index.ToString();
-                    rb.Name = "radioButton" + index.ToString();
-                    rb.Left = x + j * 100;
-                    rb.Top = y + i * 40;
-                    this.Controls.Add(rb);
+                    RadioButton radioButton = new RadioButton();
+                    radioButton.Font = new Font(radioButton.Font.FontFamily, 15);
+                    radioButton.AutoSize = true;
+                    radioButton.Text = index.ToString();
+                    radioButton.Name = "radioButton" + index.ToString();
+                    radioButton.Left = x + j * 100;
+                    radioButton.Top = y + i * 40;
+                    this.Controls.Add(radioButton);
+
+                    radioButton.CheckedChanged += new EventHandler(RadioButton_CheckedChanged);
                 }
             }
         }
@@ -90,13 +92,22 @@ namespace ElectionApp
                 GlobalVariables.SelectedPartyID = int.Parse(checkedBox.Text.Substring(0, 1));
                 GlobalVariables.SelectedPartyName = checkedBox.Text.Substring(3);
 
-                foreach (CheckBox cb in checkBoxes)
+                foreach (CheckBox checkBox in checkBoxes)
                 {
-                    if (cb != checkedBox)
+                    if (checkBox != checkedBox)
                     {
-                        cb.Checked = false;
+                        checkBox.Checked = false;
                     }
                 }
+            }
+        }
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = (RadioButton)sender;
+
+            if (radioButton.Checked)
+            {
+                GlobalVariables.PreferenceNumber = int.Parse(radioButton.Text);
             }
         }
         private void previousPage_Click(object sender, EventArgs e)
