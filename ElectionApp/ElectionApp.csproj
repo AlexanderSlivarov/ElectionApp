@@ -68,6 +68,7 @@
     <Compile Include="BulletinForm2.Designer.cs">
       <DependentUpon>BulletinForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ReviewForm.cs">
       <SubType>Form</SubType>

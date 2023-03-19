@@ -83,15 +83,19 @@ namespace ElectionApp
         }
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            SingleCheck((CheckBox)sender);
-        }
-        private void SingleCheck(CheckBox checkedBox)
-        {
-            foreach (CheckBox cb in checkBoxes)
+            CheckBox checkedBox = (CheckBox)sender;
+
+            if (checkedBox.Checked)
             {
-                if (cb != checkedBox)
+                GlobalVariables.SelectedPartyID = int.Parse(checkedBox.Text.Substring(0, 1));
+                GlobalVariables.SelectedPartyName = checkedBox.Text.Substring(3);
+
+                foreach (CheckBox cb in checkBoxes)
                 {
-                    cb.Checked = false;
+                    if (cb != checkedBox)
+                    {
+                        cb.Checked = false;
+                    }
                 }
             }
         }

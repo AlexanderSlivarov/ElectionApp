@@ -15,9 +15,26 @@ namespace ElectionApp
         public ReviewForm()
         {
             InitializeComponent();
-        }
 
-       
+            Label selectedPartyLabel = new Label();
+            selectedPartyLabel.Font = new Font(selectedPartyLabel.Font.FontFamily, 17, FontStyle.Bold);
+            selectedPartyLabel.Text = GlobalVariables.SelectedPartyName;
+
+            selectedPartyLabel.AutoSize = false;
+            selectedPartyLabel.TextAlign = ContentAlignment.MiddleCenter;
+            selectedPartyLabel.Dock = DockStyle.Fill;
+                     
+            this.Controls.Add(selectedPartyLabel);
+
+            if (GlobalVariables.SelectedPartyName is null)
+            {
+                selectedPartyLabel.Visible = false;
+            }
+            else
+            {
+                selectedPartyLabel.Visible = true;
+            }                                    
+        }       
 
         private void changeDecisionButton_Click(object sender, EventArgs e)
         {
@@ -25,7 +42,6 @@ namespace ElectionApp
             bulletinForm1.Show();
             this.Hide();
         }
-
         private void settingsButton_Click(object sender, EventArgs e)
         {
             SettingsForm settingsForm = new SettingsForm();

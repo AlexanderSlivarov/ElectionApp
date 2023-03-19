@@ -14,7 +14,9 @@ namespace ElectionApp
     {
         CheckBox[] checkBoxes = new CheckBox[13];
 
-        string[] names = new string[] {
+        private Label partyLabel;        
+
+        private string[] names = new string[] {
             "БСП",
             "ГЕРБ-СДС",
             "\"Възраждане\"",
@@ -77,30 +79,34 @@ namespace ElectionApp
         }
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            SingleCheck((CheckBox)sender);
-        }
-        private void SingleCheck(CheckBox checkedBox)
-        {            
-            foreach (CheckBox cb in checkBoxes)
+            CheckBox checkedBox = (CheckBox)sender;
+
+            if (checkedBox.Checked)
             {
-                if (cb != checkedBox)
+                GlobalVariables.SelectedPartyID = int.Parse(checkedBox.Text.Substring(0, 1));
+                GlobalVariables.SelectedPartyName = checkedBox.Text.Substring(3);
+
+                foreach (CheckBox cb in checkBoxes)
                 {
-                    cb.Checked = false;
-                }
+                    if (cb != checkedBox)
+                    {
+                        cb.Checked = false;
+                    }
+                }                                                            
             }
         }
         private void nextPage_Click(object sender, EventArgs e)
         {
             BulletinForm2 bulletinForm2 = new BulletinForm2();
             bulletinForm2.Show();
-            this.Hide();
+            this.Hide();            
         }
 
         private void reviewButton_Click(object sender, EventArgs e)
         {
             ReviewForm reviewForm = new ReviewForm();
             reviewForm.Show();
-            this.Hide();
+            this.Hide();            
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
