@@ -89,8 +89,16 @@ namespace ElectionApp
 
             if (checkedBox.Checked)
             {
-                GlobalVariables.SelectedPartyID = int.Parse(checkedBox.Text.Substring(0, 1));
-                GlobalVariables.SelectedPartyName = checkedBox.Text.Substring(3);
+                try
+                {
+                    GlobalVariables.SelectedPartyID = int.Parse(checkedBox.Text.Substring(0, 1));
+                    GlobalVariables.SelectedPartyName = checkedBox.Text.Substring(3);
+                }
+                catch (FormatException)
+                {
+                    GlobalVariables.SelectedPartyName = checkedBox.Text;
+                }
+                
 
                 foreach (CheckBox checkBox in checkBoxes)
                 {

@@ -70,7 +70,7 @@
             // settingsButton
             // 
             this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.settingsButton.Location = new System.Drawing.Point(655, 12);
+            this.settingsButton.Location = new System.Drawing.Point(564, 12);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(206, 38);
             this.settingsButton.TabIndex = 6;
@@ -81,7 +81,7 @@
             // changeDecisionButton
             // 
             this.changeDecisionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.changeDecisionButton.Location = new System.Drawing.Point(327, 388);
+            this.changeDecisionButton.Location = new System.Drawing.Point(32, 453);
             this.changeDecisionButton.Name = "changeDecisionButton";
             this.changeDecisionButton.Size = new System.Drawing.Size(186, 38);
             this.changeDecisionButton.TabIndex = 7;
@@ -92,7 +92,7 @@
             // voteButton
             // 
             this.voteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.voteButton.Location = new System.Drawing.Point(655, 535);
+            this.voteButton.Location = new System.Drawing.Point(584, 453);
             this.voteButton.Name = "voteButton";
             this.voteButton.Size = new System.Drawing.Size(186, 38);
             this.voteButton.TabIndex = 8;
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 585);
+            this.ClientSize = new System.Drawing.Size(782, 504);
             this.Controls.Add(this.voteButton);
             this.Controls.Add(this.changeDecisionButton);
             this.Controls.Add(this.settingsButton);

@@ -14,7 +14,7 @@ namespace ElectionApp
     {
         public SettingsForm()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         private void returnBackButton_Click(object sender, EventArgs e)
@@ -22,6 +22,14 @@ namespace ElectionApp
             BulletinForm1 bulletinForm1 = new BulletinForm1();
             bulletinForm1.Show();
             this.Hide();
+        }
+
+        private void hScrollBar_Scroll(object sender, ScrollEventArgs e)
+        {
+            int maxVal = hScrollBar.Maximum - hScrollBar.LargeChange + 1;
+            int percent = (int)(((double)hScrollBar.Value / (double)maxVal) * 100.0);
+            
+            percentageLabel.Text = percent.ToString() + "%";
         }
     }
 }
