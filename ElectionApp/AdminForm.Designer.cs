@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.electionResultsGrid = new System.Windows.Forms.DataGridView();
+            this.resetButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.electionResultsGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,11 +41,23 @@
             this.electionResultsGrid.Size = new System.Drawing.Size(526, 261);
             this.electionResultsGrid.TabIndex = 0;
             // 
+            // resetButton
+            // 
+            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.resetButton.Location = new System.Drawing.Point(663, 462);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(188, 45);
+            this.resetButton.TabIndex = 1;
+            this.resetButton.Text = "Нулирай";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 530);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.electionResultsGrid);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
@@ -56,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView electionResultsGrid;
+        private System.Windows.Forms.Button resetButton;
     }
 }

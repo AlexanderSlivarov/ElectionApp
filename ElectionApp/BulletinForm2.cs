@@ -91,7 +91,7 @@ namespace ElectionApp
             {
                 try
                 {
-                    GlobalVariables.SelectedPartyID = int.Parse(checkedBox.Text.Substring(0, 1));
+                    GlobalVariables.SelectedPartyListNumber = int.Parse(checkedBox.Text.Substring(0, 1));
                     GlobalVariables.SelectedPartyName = checkedBox.Text.Substring(3);
                 }
                 catch (FormatException)

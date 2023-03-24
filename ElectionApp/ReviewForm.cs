@@ -62,7 +62,17 @@ namespace ElectionApp
 
         private void voteButton_Click(object sender, EventArgs e)
         {
-            Party votedParty = new Party(GlobalVariables.SelectedPartyID, GlobalVariables.SelectedPartyName);           
+            Party votedParty = null;
+
+            if (GlobalVariables.PreferenceNumber != 0)
+            {
+                votedParty = new Party(GlobalVariables.SelectedPartyListNumber, GlobalVariables.SelectedPartyName, GlobalVariables.PreferenceNumber);
+            }
+            else
+            {
+                votedParty = new Party(GlobalVariables.SelectedPartyListNumber, GlobalVariables.SelectedPartyName);
+            }        
+            
             votedParty.Votes += 1;
 
             electionBusiness.Add(votedParty);
