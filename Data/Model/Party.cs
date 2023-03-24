@@ -9,7 +9,12 @@ namespace Data.Model
     public class Party
     {
         private int id;
-        private string name;        
+        private string name;  
+        
+        public Party()
+        {
+
+        }
 
         public Party(int id, string name)
         {

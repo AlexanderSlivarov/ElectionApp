@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,28 +10,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ElectionApp
-{
+{    
     public partial class AdminForm : Form
     {
+        ElectionBusiness electionBusiness = new ElectionBusiness();
         public AdminForm()
         {
             InitializeComponent();
-            passwordTextBox.KeyPress += passwordTextBox_KeyPress;
-        }
 
-        private void passwordTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
+            electionResultsGrid.DataSource = electionBusiness.GetAll();            
+            electionResultsGrid.Dock = DockStyle.Fill;
+
+            foreach (DataGridViewColumn column in electionResultsGrid.Columns)
             {
-                if (passwordTextBox.Text == "12345")
-                {
-                    passwordLabel.Visible = false;
-                    passwordTextBox.Visible = false;
-                }
-                else
-                {                    
-                    passwordLabel.Text = "Грешна парола.";
-                }
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
     }

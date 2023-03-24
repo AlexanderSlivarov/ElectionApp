@@ -26,7 +26,7 @@ namespace ElectionApp
 
         private void adminButton_Click(object sender, EventArgs e)
         {
-            AdminForm adminForm = new AdminForm();
+            AdminLogin adminForm = new AdminLogin();
             adminForm.Show();
             this.Hide();
         }
