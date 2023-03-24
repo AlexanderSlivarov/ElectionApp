@@ -101,6 +101,7 @@
             this.voteButton.TabIndex = 8;
             this.voteButton.Text = "Гласуване";
             this.voteButton.UseVisualStyleBackColor = true;
+            this.voteButton.Click += new System.EventHandler(this.voteButton_Click);
             // 
             // ReviewForm
             // 

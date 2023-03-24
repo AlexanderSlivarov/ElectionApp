@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business;
+using Data.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace ElectionApp
 {
     public partial class ReviewForm : Form
     {
+        ElectionBusiness electionBusiness = new ElectionBusiness();
         public ReviewForm()
         {
             InitializeComponent();
@@ -54,6 +57,18 @@ namespace ElectionApp
         {
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.Show();
+            this.Hide();
+        }
+
+        private void voteButton_Click(object sender, EventArgs e)
+        {
+            Party votedParty = new Party(GlobalVariables.SelectedPartyID, GlobalVariables.SelectedPartyName);           
+            votedParty.Votes += 1;
+
+            electionBusiness.Add(votedParty);
+
+            EndForm endForm = new EndForm();
+            endForm.Show();
             this.Hide();
         }
     }
