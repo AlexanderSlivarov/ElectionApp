@@ -55,6 +55,7 @@
             // 
             // voteButton
             // 
+            this.voteButton.AutoSize = true;
             this.voteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.voteButton.Location = new System.Drawing.Point(306, 304);
             this.voteButton.Name = "voteButton";

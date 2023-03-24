@@ -69,6 +69,7 @@
             // 
             // settingsButton
             // 
+            this.settingsButton.AutoSize = true;
             this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.settingsButton.Location = new System.Drawing.Point(564, 12);
             this.settingsButton.Name = "settingsButton";
@@ -80,6 +81,7 @@
             // 
             // changeDecisionButton
             // 
+            this.changeDecisionButton.AutoSize = true;
             this.changeDecisionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.changeDecisionButton.Location = new System.Drawing.Point(32, 453);
             this.changeDecisionButton.Name = "changeDecisionButton";
@@ -91,6 +93,7 @@
             // 
             // voteButton
             // 
+            this.voteButton.AutoSize = true;
             this.voteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.voteButton.Location = new System.Drawing.Point(584, 453);
             this.voteButton.Name = "voteButton";

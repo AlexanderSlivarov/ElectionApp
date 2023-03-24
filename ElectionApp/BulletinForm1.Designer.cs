@@ -37,6 +37,7 @@
             // 
             // settingsButton
             // 
+            this.settingsButton.AutoSize = true;
             this.settingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.settingsButton.Location = new System.Drawing.Point(766, 12);
             this.settingsButton.Name = "settingsButton";
@@ -68,6 +69,7 @@
             // 
             // nextPage
             // 
+            this.nextPage.AutoSize = true;
             this.nextPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.nextPage.Location = new System.Drawing.Point(292, 610);
             this.nextPage.Name = "nextPage";
@@ -79,6 +81,7 @@
             // 
             // reviewButton
             // 
+            this.reviewButton.AutoSize = true;
             this.reviewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.reviewButton.Location = new System.Drawing.Point(806, 610);
             this.reviewButton.Name = "reviewButton";

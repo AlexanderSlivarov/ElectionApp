@@ -16,7 +16,7 @@ namespace ElectionApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WelcomeForm());
+            Application.Run(new StartUpForm());
         }
     }
 }

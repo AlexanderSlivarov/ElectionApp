@@ -42,6 +42,7 @@
             // 
             // returnBackButton
             // 
+            this.returnBackButton.AutoSize = true;
             this.returnBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.returnBackButton.Location = new System.Drawing.Point(582, 12);
             this.returnBackButton.Name = "returnBackButton";
