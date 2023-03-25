@@ -39,7 +39,7 @@ namespace ElectionApp
                 electionBusiness.Delete(party.ID);
             }
 
-            electionResultsGrid.Visible = false;
+            Application.ExitThread();
         }
     }
 }
