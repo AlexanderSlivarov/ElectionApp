@@ -12,6 +12,9 @@ namespace ElectionApp
 {
     public partial class EndForm : Form
     {
+        // <summary>
+        /// This is the final page that voter can see, thanking for his/her vote.
+        /// </summary>
         public EndForm()
         {
             InitializeComponent();
@@ -19,11 +22,14 @@ namespace ElectionApp
             this.Load += new EventHandler(EndForm_Load);
         }
 
+        // <summary>
+        /// Here after 3 seconds, the app is closing automatically
+        /// </summary>
         private void EndForm_Load(object sender, EventArgs e)
         {
             CloseApp();
         }
-
+        
         private void CloseApp()
         {                     
             Timer timer = new Timer();

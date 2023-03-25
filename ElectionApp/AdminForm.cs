@@ -13,6 +13,9 @@ using System.Windows.Forms;
 
 namespace ElectionApp
 {
+    // <summary>
+    /// This is the Admin page where you can see the results of the election.
+    /// </summary>
     public partial class AdminForm : Form
     {
         ElectionBusiness electionBusiness = new ElectionBusiness();
@@ -37,6 +40,10 @@ namespace ElectionApp
             electionResultsGrid.Columns[0].Visible = false;
             electionResultsGrid.Columns[3].Visible = false;
         }
+
+        // <summary>
+        /// This button summarize the results.
+        /// </summary>
         private void sumButton_Click(object sender, EventArgs e)
         {
             Dictionary<string, List<int>> partyPreferences = new Dictionary<string, List<int>>();
@@ -95,6 +102,10 @@ namespace ElectionApp
             Controls.Add(summedVotesGrid);
             sumButton.Visible = false;
         }
+
+        // <summary>
+        /// This button resets the vote results and force app to exit.
+        /// </summary>
         private void resetButton_Click(object sender, EventArgs e)
         {
             foreach (Party party in electionBusiness.GetAll())

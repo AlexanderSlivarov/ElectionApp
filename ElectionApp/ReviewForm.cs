@@ -12,13 +12,23 @@ using System.Windows.Forms;
 
 namespace ElectionApp
 {
+    // <summary>
+    /// This is the ReviewForm. Here the voter can see for which party is he/she has chosen and also the preference number. After that he/she can vote by clicking the button.
+    /// </summary>
     public partial class ReviewForm : Form
     {
+        // <summary>
+        /// Initializing a object from ElectionBusiness type.
+        /// </summary>
+         
         ElectionBusiness electionBusiness = new ElectionBusiness();
         public ReviewForm()
         {
             InitializeComponent();
 
+            // <summary>
+            /// Creating a label for the chosen party and preference number.
+            /// </summary>
             Label selectedPartyLabel = new Label();
             selectedPartyLabel.Font = new Font(selectedPartyLabel.Font.FontFamily, 20, FontStyle.Bold);
 
@@ -52,14 +62,21 @@ namespace ElectionApp
             {
                 selectedPartyLabel.Visible = true;
             }                                    
-        }       
+        }
 
+        // <summary>
+        /// This button sends you back to the first page of the Bulletin to change your decision.
+        /// </summary>
         private void changeDecisionButton_Click(object sender, EventArgs e)
         {
             BulletinForm1 bulletinForm1 = new BulletinForm1();
             bulletinForm1.Show();
             this.Hide();
         }
+
+        // <summary>
+        /// This button sends you the settings.
+        /// </summary>
         private void settingsButton_Click(object sender, EventArgs e)
         {
             SettingsForm settingsForm = new SettingsForm();
@@ -67,6 +84,9 @@ namespace ElectionApp
             this.Hide();
         }
 
+        // <summary>
+        /// This button generate user's vote and opens the End Form.
+        /// </summary>
         private void voteButton_Click(object sender, EventArgs e)
         {
             Party votedParty = null;

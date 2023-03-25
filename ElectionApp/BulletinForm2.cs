@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace ElectionApp
 {
+    // <summary>
+    /// This is the second page of the Bulletin with the remained parties.
+    /// </summary>
     public partial class BulletinForm2 : Form
     {
         CheckBox[] checkBoxes = new CheckBox[9];
@@ -33,6 +36,9 @@ namespace ElectionApp
 
             for (int i = 0; i < 9; i++)
             {
+                // <summary>
+                /// Creating checkBoxes for each party.
+                /// </summary>
                 checkBoxes[i] = new CheckBox();
                 checkBoxes[i].Font = new Font(checkBoxes[i].Font.FontFamily, 15);
                 checkBoxes[i].AutoSize = true;
@@ -69,6 +75,9 @@ namespace ElectionApp
                         break;
                     }
 
+                    // <summary>
+                    /// Creating radioButtons for preference number.
+                    /// </summary>
                     int index = i * 3 + j + 101;
                     RadioButton radioButton = new RadioButton();
                     radioButton.Font = new Font(radioButton.Font.FontFamily, 15);
@@ -83,6 +92,10 @@ namespace ElectionApp
                 }
             }
         }
+
+        // <summary>
+        /// This method traces the checkBoxes to be selected only one of them.
+        /// </summary>
         private void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkedBox = (CheckBox)sender;
@@ -109,6 +122,10 @@ namespace ElectionApp
                 }
             }
         }
+
+        // <summary>
+        /// This method keeps the preference number when it is selected
+        /// </summary>
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton radioButton = (RadioButton)sender;
@@ -118,6 +135,10 @@ namespace ElectionApp
                 GlobalVariables.PreferenceNumber = int.Parse(radioButton.Text);
             }
         }
+
+        // <summary>
+        /// This button sends you to the first page of the Bulletin and hides this form.
+        /// </summary>
         private void previousPage_Click(object sender, EventArgs e)
         {
             BulletinForm1 bulletinForm1 = new BulletinForm1();
@@ -125,6 +146,9 @@ namespace ElectionApp
             this.Hide();
         }
 
+        // <summary>
+        /// This button sends you to the review page and hides this form.
+        /// </summary>
         private void reviewButton_Click(object sender, EventArgs e)
         {
             ReviewForm reviewForm = new ReviewForm();
@@ -132,6 +156,9 @@ namespace ElectionApp
             this.Hide();
         }
 
+        // <summary>
+        /// This button sends you to settings page and hides this form.
+        /// </summary>
         private void settingsButton_Click(object sender, EventArgs e)
         {
             SettingsForm settingsForm = new SettingsForm();

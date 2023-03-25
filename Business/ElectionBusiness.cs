@@ -9,6 +9,9 @@ using System.IO;
 
 namespace Business
 {
+    // <summary>
+    /// CRUD operations.
+    /// </summary>
     public class ElectionBusiness
     {
         private ElectionContext electionContext;

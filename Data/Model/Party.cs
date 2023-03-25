@@ -6,18 +6,28 @@ using System.Threading.Tasks;
 
 namespace Data.Model
 {
+    /// <summary>
+    /// Model for the Party class. Database uses this model.
+    /// </summary>
     public class Party
     {
         private int id;
         private int listNumber;
         private string name;
         private int preferenceNumber;
-        
+
+        /// <summary>
+        /// Empty constructor for the class. 
+        /// </summary>
         public Party()
         {
 
         }
-
+        /// <summary>
+        /// Constructor for Party class. This constructor fills every field in the class. By default the Votes are 0.
+        /// </summary>
+        /// <param name="listNumber"></param>
+        /// <param name="name"></param>       
         public Party(int listNumber, string name)
         {
             this.ListNumber = listNumber;
@@ -25,6 +35,12 @@ namespace Data.Model
             this.Votes = 0;
         }
 
+        /// <summary>
+        /// Constructor for Order class. This constructor fills every field in the class. By default the Votes are 0;
+        /// </summary>
+        /// <param name="listNumber"></param>
+        /// <param name="name"></param>
+        /// <param name="preferenceNumber"></param>
         public Party(int listNumber, string name, int preferenceNumber)
         {
             this.ListNumber = listNumber;
@@ -33,6 +49,9 @@ namespace Data.Model
             this.Votes = 0;
         }
 
+        /// <summary>
+        /// Public fields that the class and database contain. 
+        /// </summary>
         public int ID
         {
             get
