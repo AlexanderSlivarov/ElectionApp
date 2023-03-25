@@ -28,7 +28,14 @@ namespace ElectionApp
             }
             else
             {
-                selectedPartyLabel.Text = $"{GlobalVariables.SelectedPartyName} \n {GlobalVariables.PreferenceNumber}";
+                if (GlobalVariables.SelectedPartyName == "Не подкрепям никого.")
+                {
+                    selectedPartyLabel.Text = GlobalVariables.SelectedPartyName;
+                }
+                else
+                {
+                    selectedPartyLabel.Text = $"{GlobalVariables.SelectedPartyName} \n {GlobalVariables.PreferenceNumber}";
+                }                
             }            
 
             selectedPartyLabel.AutoSize = false;
