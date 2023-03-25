@@ -15,6 +15,29 @@ namespace ElectionApp
         public EndForm()
         {
             InitializeComponent();
+            
+            this.Load += new EventHandler(EndForm_Load);
+        }
+
+        private void EndForm_Load(object sender, EventArgs e)
+        {
+            CloseApp();
+        }
+
+        private void CloseApp()
+        {                     
+            Timer timer = new Timer();
+            timer.Interval = 3000; 
+            timer.Tick += new EventHandler(Timer_Tick);
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {            
+            Timer timer = (Timer)sender;
+            timer.Stop();
+            
+            Application.ExitThread();
         }
     }
 }
