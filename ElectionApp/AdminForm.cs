@@ -17,7 +17,7 @@ namespace ElectionApp
     {
         ElectionBusiness electionBusiness = new ElectionBusiness();
         Dictionary<string, int> partyVotes = new Dictionary<string, int>();
-        DataGridView summedVotesGrid = new DataGridView(); 
+        DataGridView summedVotesGrid = new DataGridView();
         public AdminForm()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace ElectionApp
             electionResultsGrid.Columns[3].Visible = false;
         }
         private void sumButton_Click(object sender, EventArgs e)
-        {           
+        {
             foreach (DataGridViewRow row in electionResultsGrid.Rows)
             {
                 string partyName = row.Cells["ListNumber"].Value.ToString() + " - " + row.Cells["Name"].Value.ToString() + " - " + row.Cells["Votes"].Value.ToString();
@@ -49,12 +49,12 @@ namespace ElectionApp
                     partyVotes.Add(partyName, 1);
                 }
             }
-            
+
             DataTable summedVotesTable = new DataTable();
             summedVotesTable.Columns.Add("ListNumber", typeof(int));
             summedVotesTable.Columns.Add("Party", typeof(string));
             summedVotesTable.Columns.Add("Votes", typeof(int));
-            
+
             foreach (KeyValuePair<string, int> kvp in partyVotes)
             {
                 string[] partyInfo = kvp.Key.Split('-');
@@ -63,7 +63,7 @@ namespace ElectionApp
                 int voteCount = kvp.Value;
                 summedVotesTable.Rows.Add(listNumber, partyName, voteCount);
             }
-                        
+
             summedVotesGrid.DataSource = summedVotesTable;
             summedVotesGrid.Dock = DockStyle.Fill;
 
@@ -71,7 +71,7 @@ namespace ElectionApp
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
-           
+
             electionResultsGrid.Visible = false;
             Controls.Add(summedVotesGrid);
             sumButton.Visible = false;

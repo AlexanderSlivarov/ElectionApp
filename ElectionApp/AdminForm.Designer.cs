@@ -45,9 +45,9 @@
             // sumButton
             // 
             this.sumButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.sumButton.Location = new System.Drawing.Point(27, 380);
+            this.sumButton.Location = new System.Drawing.Point(12, 389);
             this.sumButton.Name = "sumButton";
-            this.sumButton.Size = new System.Drawing.Size(154, 49);
+            this.sumButton.Size = new System.Drawing.Size(191, 49);
             this.sumButton.TabIndex = 1;
             this.sumButton.Text = "Сумирай";
             this.sumButton.UseVisualStyleBackColor = true;
@@ -56,9 +56,9 @@
             // resetButton
             // 
             this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.resetButton.Location = new System.Drawing.Point(623, 380);
+            this.resetButton.Location = new System.Drawing.Point(579, 391);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(154, 49);
+            this.resetButton.Size = new System.Drawing.Size(209, 47);
             this.resetButton.TabIndex = 2;
             this.resetButton.Text = "Нулирай";
             this.resetButton.UseVisualStyleBackColor = true;
