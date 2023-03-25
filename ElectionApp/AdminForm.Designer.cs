@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.electionResultsGrid = new System.Windows.Forms.DataGridView();
             this.sumButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
@@ -36,9 +38,12 @@
             // 
             // electionResultsGrid
             // 
+            this.electionResultsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.electionResultsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.electionResultsGrid.Location = new System.Drawing.Point(0, 0);
             this.electionResultsGrid.Name = "electionResultsGrid";
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.electionResultsGrid.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.electionResultsGrid.Size = new System.Drawing.Size(801, 218);
             this.electionResultsGrid.TabIndex = 0;
             // 
@@ -47,7 +52,7 @@
             this.sumButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.sumButton.Location = new System.Drawing.Point(12, 389);
             this.sumButton.Name = "sumButton";
-            this.sumButton.Size = new System.Drawing.Size(191, 49);
+            this.sumButton.Size = new System.Drawing.Size(209, 49);
             this.sumButton.TabIndex = 1;
             this.sumButton.Text = "Сумирай";
             this.sumButton.UseVisualStyleBackColor = true;
@@ -72,6 +77,7 @@
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.sumButton);
             this.Controls.Add(this.electionResultsGrid);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             ((System.ComponentModel.ISupportInitialize)(this.electionResultsGrid)).EndInit();

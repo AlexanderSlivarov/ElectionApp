@@ -26,6 +26,9 @@ namespace ElectionApp
             electionResultsGrid.ReadOnly = true;
             electionResultsGrid.Dock = DockStyle.Fill;
 
+            summedVotesGrid.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            summedVotesGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+
             foreach (DataGridViewColumn column in electionResultsGrid.Columns)
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -36,9 +39,20 @@ namespace ElectionApp
         }
         private void sumButton_Click(object sender, EventArgs e)
         {
+            Dictionary<string, List<int>> partyPreferences = new Dictionary<string, List<int>>();
             foreach (DataGridViewRow row in electionResultsGrid.Rows)
             {
-                string partyName = row.Cells["ListNumber"].Value.ToString() + " - " + row.Cells["Name"].Value.ToString() + " - " + row.Cells["Votes"].Value.ToString();
+                string partyName = row.Cells["ListNumber"].Value.ToString() + " : " + row.Cells["Name"].Value.ToString() + " : " + row.Cells["Votes"].Value.ToString();
+                int[] prefNums = Array.ConvertAll(row.Cells["PreferenceNumber"].Value.ToString().Split(','), s => int.Parse(s.Trim()));
+
+                if (partyPreferences.ContainsKey(partyName))
+                {
+                    partyPreferences[partyName].AddRange(prefNums.ToList());
+                }
+                else
+                {
+                    partyPreferences.Add(partyName, prefNums.ToList());
+                }
 
                 if (partyVotes.ContainsKey(partyName))
                 {
@@ -54,14 +68,19 @@ namespace ElectionApp
             summedVotesTable.Columns.Add("ListNumber", typeof(int));
             summedVotesTable.Columns.Add("Party", typeof(string));
             summedVotesTable.Columns.Add("Votes", typeof(int));
+            summedVotesTable.Columns.Add("Preferences", typeof(string));
 
-            foreach (KeyValuePair<string, int> kvp in partyVotes)
+            var sortedParties = partyVotes.OrderByDescending(x => x.Value);
+
+            foreach (var party in sortedParties)
             {
-                string[] partyInfo = kvp.Key.Split('-');
+                string[] partyInfo = party.Key.Split(':');
                 int listNumber = int.Parse(partyInfo[0]);
                 string partyName = partyInfo[1].Trim();
-                int voteCount = kvp.Value;
-                summedVotesTable.Rows.Add(listNumber, partyName, voteCount);
+                int voteCount = party.Value;
+                List<int> preferences = partyPreferences[party.Key];
+                string preferencesString = string.Join(",", preferences.Select(p => p.ToString()));
+                summedVotesTable.Rows.Add(listNumber, partyName, voteCount, preferencesString);
             }
 
             summedVotesGrid.DataSource = summedVotesTable;
@@ -84,6 +103,6 @@ namespace ElectionApp
             }
 
             Application.ExitThread();
-        }
+        }        
     }
 }

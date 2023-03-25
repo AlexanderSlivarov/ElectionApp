@@ -34,5 +34,12 @@ namespace ElectionApp
                 }
             }
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            StartUpForm startUpForm = new StartUpForm();
+            startUpForm.Show();
+            this.Hide();
+        }
     }
 }

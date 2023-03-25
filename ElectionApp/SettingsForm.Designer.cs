@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.returnBackButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,9 +59,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.Location = new System.Drawing.Point(49, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 31);
+            this.label1.Size = new System.Drawing.Size(104, 31);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Brightness";
+            this.label1.Text = "Яркост";
             // 
             // label2
             // 
@@ -68,9 +69,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label2.Location = new System.Drawing.Point(49, 188);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 31);
+            this.label2.Size = new System.Drawing.Size(227, 31);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Text Font";
+            this.label2.Text = "Шрифт на текста";
             // 
             // label3
             // 
@@ -78,9 +79,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label3.Location = new System.Drawing.Point(49, 262);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 31);
+            this.label3.Size = new System.Drawing.Size(236, 31);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Text Size";
+            this.label3.Text = "Размер на текста";
             // 
             // label4
             // 
@@ -88,9 +89,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label4.Location = new System.Drawing.Point(49, 341);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 31);
+            this.label4.Size = new System.Drawing.Size(80, 31);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Theme";
+            this.label4.Text = "Тема";
             // 
             // comboBox1
             // 
@@ -173,6 +174,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.returnBackButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
             this.Text = "Настройки";
             this.ResumeLayout(false);

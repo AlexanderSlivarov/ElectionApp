@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReviewForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -83,7 +84,7 @@
             // 
             this.changeDecisionButton.AutoSize = true;
             this.changeDecisionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.changeDecisionButton.Location = new System.Drawing.Point(32, 453);
+            this.changeDecisionButton.Location = new System.Drawing.Point(12, 470);
             this.changeDecisionButton.Name = "changeDecisionButton";
             this.changeDecisionButton.Size = new System.Drawing.Size(186, 38);
             this.changeDecisionButton.TabIndex = 7;
@@ -95,7 +96,7 @@
             // 
             this.voteButton.AutoSize = true;
             this.voteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.voteButton.Location = new System.Drawing.Point(584, 453);
+            this.voteButton.Location = new System.Drawing.Point(584, 470);
             this.voteButton.Name = "voteButton";
             this.voteButton.Size = new System.Drawing.Size(186, 38);
             this.voteButton.TabIndex = 8;
@@ -107,13 +108,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 504);
+            this.ClientSize = new System.Drawing.Size(782, 520);
             this.Controls.Add(this.voteButton);
             this.Controls.Add(this.changeDecisionButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReviewForm";
             this.Text = "Преглед";
             this.ResumeLayout(false);
