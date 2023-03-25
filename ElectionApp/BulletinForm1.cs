@@ -16,11 +16,9 @@ namespace ElectionApp
     public partial class BulletinForm1 : Form
     {
         CheckBox[] checkBoxes = new CheckBox[13];
-        RadioButton[] radioButtons = new RadioButton[32];
+        RadioButton[] radioButtons = new RadioButton[32];               
 
-        private Label partyLabel;        
-
-        private string[] names = new string[] {
+        private  string[] names = new string[] {
             "БСП",
             "ГЕРБ-СДС",
             "\"Възраждане\"",
